@@ -50,7 +50,7 @@ import Places from "./components/layout/Places";
 import MapWrap from "./components/layout/MapWrap";
 
 import appClasses from "./App.module.css";
-import FullGallery from "./components/layout/FullGallery";
+// import FullGallery from "./components/layout/FullGallery";
 import { useState } from "react";
 import LoadingSpinner from "./components/UI/LoadingSpinner";
 import LazyLoad from "react-lazyload";
@@ -233,11 +233,11 @@ const App = () => {
 
       {/* <FullGallery images={images} /> */}
 
-      {/* <LazyLoad height={400}>
+      <LazyLoad height={400}>
         <MapWrap />
-      </LazyLoad> */}
+      </LazyLoad>
 
-      <ContactForm background={img5} />
+      <ContactForm background={img10} />
     </div>
   );
 };
