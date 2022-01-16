@@ -1,0 +1,33 @@
+.wrap {
+  margin: 10rem auto;
+}
+
+.paragraph {
+  text-align: justify;
+  padding: 0 1rem;
+  line-height: 2.3rem;
+  margin-bottom: 5rem;
+  font-size: 1.7rem;
+}
+
+.paragraph:last-child {
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width: 700px) {
+  .paragraph {
+    width: 90%;
+    max-width: 80rem;
+    margin: 0 auto 5rem auto;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .wrap {
+    margin: 0;
+  }
+
+  .paragraph {
+    width: 100%;
+  }
+}

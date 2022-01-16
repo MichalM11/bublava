@@ -1,0 +1,16 @@
+.mapwrap {
+  margin: 10rem auto;
+}
+
+@media only screen and (min-width: 700px) {
+  .mapwrap {
+    overflow: hidden;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .mapwrap {
+    width: 100%;
+    margin: 0;
+  }
+}

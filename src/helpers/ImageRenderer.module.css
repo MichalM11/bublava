@@ -1,0 +1,30 @@
+.imageContainer {
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+
+.image {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  opacity: 0;
+}
+
+.thumb {
+  opacity: 1;
+  filter: blur(10px);
+  transition: opacity 1s ease;
+  position: absolute;
+  width: 100%;
+  height: auto;
+}
+
+.thumbIsLoaded {
+  opacity: 0;
+}
+
+.imageIsLoaded {
+  transition: opacity 1s ease;
+  opacity: 1;
+}

@@ -1,0 +1,28 @@
+.list {
+  display: grid;
+  justify-content: center;
+  font-size: 1.8rem;
+}
+
+.item {
+  padding: 1rem;
+}
+
+@media only screen and (min-width: 700px) {
+  .list {
+    width: 80%;
+    margin: 0 auto;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .list {
+    width: 40rem;
+    grid-template-columns: 1fr;
+  }
+
+  .item {
+    margin: 0.5rem 0;
+  }
+}

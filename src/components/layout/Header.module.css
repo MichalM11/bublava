@@ -1,0 +1,199 @@
+.header {
+  height: 50vh;
+  width: 100%;
+  position: relative;
+}
+
+.hero {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  background: url("../../assets/img5.png") center center/cover;
+}
+
+.info {
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  transform: translate(50%, 50%);
+  width: 80vw;
+  max-width: 30rem;
+  background: var(--white-color);
+  border-radius: 1rem;
+  border-radius: 1rem;
+
+  padding: 1rem 3rem;
+  box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.25);
+  animation: slideInfo 1s ease-out forwards;
+}
+
+.small {
+  font-size: 1.1rem;
+  margin: 0.6rem;
+  font-weight: 400;
+}
+
+.large {
+  font-size: 1.6rem;
+  font-weight: 800;
+  margin: 0.6rem;
+}
+
+.btn {
+  position: absolute;
+  bottom: 10rem;
+  left: 50%;
+
+  width: 70vw;
+  max-width: 30rem;
+  transform: translateX(-50%);
+  opacity: 1;
+  font-weight: 700;
+
+  background: var(--main-color);
+  border-radius: 1rem;
+
+  padding: 1.5rem 3rem;
+  border: none;
+  color: var(--main-color-text);
+  font-size: 2rem;
+  cursor: pointer;
+  box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.25);
+  animation: slideBtn 1s ease-out forwards;
+  border: 0.2rem solid var(--main-color);
+  transition: background 0.5s, color 0.5s;
+}
+
+.btn:hover {
+  background: var(--light-grey);
+  color: var(--main-color);
+}
+
+@keyframes slideInfo {
+  0% {
+    bottom: -5rem;
+    opacity: 0;
+  }
+
+  100% {
+    bottom: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes slideBtn {
+  0% {
+    bottom: 5rem;
+    opacity: 0;
+  }
+  100% {
+    bottom: 10rem;
+    opacity: 1;
+  }
+}
+
+@media only screen and (min-width: 700px) {
+  .header {
+    height: 50vh;
+    min-height: 30rem;
+    max-height: 60rem;
+    width: 90%;
+    position: relative;
+    margin: 0 auto;
+  }
+
+  .hero {
+    border-radius: 1rem;
+  }
+
+  .info {
+    position: absolute;
+    bottom: 15rem;
+    left: 5rem;
+    right: unset;
+    width: 30rem;
+    max-width: 30rem;
+    transform: translate(0);
+  }
+
+  .btn {
+    top: unset;
+    left: 5rem;
+    bottom: 5rem;
+
+    width: 30rem;
+    transform: translateX(0);
+
+    padding: 1.5rem 3rem;
+  }
+
+  @keyframes slideInfo {
+    0% {
+      bottom: 10rem;
+      opacity: 0;
+    }
+
+    100% {
+      bottom: 15rem;
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideBtn {
+    0% {
+      bottom: 0;
+      opacity: 0;
+    }
+    100% {
+      bottom: 5rem;
+      opacity: 1;
+    }
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .header {
+    height: 70vh;
+  }
+
+  .small {
+    font-size: 1.5rem;
+  }
+
+  .large {
+    font-size: 2.5rem;
+  }
+
+  .info {
+    bottom: 5rem;
+  }
+
+  .btn {
+    bottom: unset;
+    left: unset;
+
+    top: -7.5rem;
+    right: 0;
+    animation: unset;
+    font-size: 1.8rem;
+    width: auto;
+    z-index: 100;
+    border-radius: 3rem;
+    box-shadow: unset;
+    border: 0.2rem solid var(--main-color);
+    transition: background 0.5s, color 0.5s;
+  }
+
+  @keyframes slideInfo {
+    0% {
+      bottom: 0rem;
+      opacity: 0;
+    }
+
+    100% {
+      bottom: 5rem;
+      opacity: 1;
+    }
+  }
+}

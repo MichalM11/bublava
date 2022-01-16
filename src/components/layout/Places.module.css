@@ -1,0 +1,48 @@
+.places {
+  display: grid;
+  justify-content: center;
+  gap: 6rem;
+  position: relative;
+  background: var(--main-color);
+  padding: 5rem 1rem;
+}
+
+.smooth {
+  position: absolute;
+}
+
+.place {
+  justify-self: center;
+  text-align: center;
+  width: 100%;
+  color: var(--main-color-text);
+  transition: transform 1.5s ease-out, opacity 1.5s ease-out;
+}
+
+.place .info {
+  font-size: 2.5rem;
+  margin: 2rem 0 1rem 0;
+}
+
+.place p {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.slider {
+  transform: translateX(-6rem);
+  opacity: 0;
+}
+
+@media only screen and (min-width: 700px) {
+  .places {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .places {
+    display: flex;
+    width: 100%;
+  }
+}
