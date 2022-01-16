@@ -16,9 +16,9 @@ const GoogleMap = (props) => {
         height: "40rem",
         position: "relative",
       }}
-      initialCenter={{ lat: 49.5503884, lng: 16.5707373 }}
+      initialCenter={{ lat: 45, lng: 16 }}
     >
-      <Marker position={{ lat: 49.5503884, lng: 16.5707373 }} />
+      <Marker position={{ lat: 45, lng: 16 }} />
     </Map>
   );
 };
