@@ -12,12 +12,12 @@ const Profile = () => {
     <section className={classes.container}>
       <Element name="profile" />
       <div className={classes.wrap}>
-        <img className={classes.photo} src={profileImg} alt="Profilové foto" />
+        {/* <img className={classes.photo} src={profileImg} alt="Profilové foto" /> */}
         <div>
-          <h3 className={classes.heading}>Zurab Kereselidze</h3>
+          <h3 className={classes.heading}>jmeno</h3>
           <ul className={classes.topList}>
             <ul className={classes.secList}>
-              <li className={classes.value}>zurab.kereselidze@darfin.cz</li>
+              <li className={classes.value}>email</li>
               <li>
                 <FontAwesomeIcon
                   color="#ad7f2b"
@@ -30,7 +30,7 @@ const Profile = () => {
             <ul className={classes.secList}>
               <li className={classes.value}>
                 <a className={classes.link} href="tel:+420774515835">
-                  +420 774 515 835
+                  tel
                 </a>
               </li>
               <li>

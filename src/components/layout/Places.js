@@ -43,32 +43,32 @@ const Places = () => {
       <Element name="places" className={placesClasses.smooth} />
       <div className={placesClasses.place + " " + placesClasses.slider}>
         <FontAwesomeIcon icon={faStore} size={size} color={color} />
-        <p className={placesClasses.info}>Obchod</p>
+        <p className={placesClasses.info}>Obchod ???</p>
         <p>311 m</p>
       </div>
       <div className={placesClasses.place + " " + placesClasses.slider}>
         <FontAwesomeIcon icon={faBusSimple} size={size} color={color} />
-        <p className={placesClasses.info}>MHD</p>
+        <p className={placesClasses.info}>MHD ???</p>
         <p>150 m</p>
       </div>
       <div className={placesClasses.place + " " + placesClasses.slider}>
         <FontAwesomeIcon icon={faGraduationCap} size={size} color={color} />
-        <p className={placesClasses.info}>Škola</p>
+        <p className={placesClasses.info}>Škola ???</p>
         <p>196 m</p>
       </div>
       <div className={placesClasses.place + " " + placesClasses.slider}>
         <FontAwesomeIcon icon={faUtensils} size={size} color={color} />
-        <p className={placesClasses.info}>Restaurace</p>
+        <p className={placesClasses.info}>Restaurace ???</p>
         <p>1013 m</p>
       </div>
       <div className={placesClasses.place + " " + placesClasses.slider}>
         <FontAwesomeIcon icon={faEnvelope} size={size} color={color} />
-        <p className={placesClasses.info}>Pošta</p>
+        <p className={placesClasses.info}>Pošta ???</p>
         <p>237 m</p>
       </div>
       <div className={placesClasses.place + " " + placesClasses.slider}>
         <FontAwesomeIcon icon={faHouseMedical} size={size} color={color} />
-        <p className={placesClasses.info}>Lékař</p>
+        <p className={placesClasses.info}>Lékař ???</p>
         <p>262 m</p>
       </div>
     </section>
