@@ -1,6 +1,6 @@
 {
   "menu": {
-    "item1": "Úvod",
+    "item1": "Úvod CZ",
     "item2": "Detaily",
     "item3": "Okolí",
     "item4": "Popis",
@@ -8,14 +8,14 @@
     "item6": "Kontakt"
   },
   "header": {
-    "title": "PRODEJ VILY 445 m2 cesky",
+    "title": "PRODEJ VILY 445 m2 CZ",
     "price": "Cena: ",
     "location": "Bublava, Krušné Hory",
     "button": "Sjednat Prohlídku"
   },
 
   "list": {
-    "item1": "Vila 445 m²",
+    "item1": "Vila 445 m² CZ",
     "item2": "4 podlaží, 1 podzemní podlaží",
     "item3": "Turisticky vyhledávaná oblast",
     "item4": "Pozemek 2 358 m²",

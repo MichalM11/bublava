@@ -93,6 +93,18 @@
   cursor: pointer;
 }
 
+.list select {
+  background-color: #fff;
+  border: transparent;
+  color: var(--main-color);
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.list select:active {
+  outline: none;
+}
+
 @media only screen and (min-width: 700px) {
   .navbar {
     position: relative;

@@ -8,10 +8,6 @@ const Navigation = () => {
 
   const { t, i18n } = useTranslation();
 
-  // useEffect(() => {
-  //   i18n.changeLanguage("de");
-  // }, [i18n]);
-
   const goHomeHandler = () => {
     animateScroll.scrollToTop({ duration: 1000, smooth: true });
 
@@ -72,6 +68,10 @@ const Navigation = () => {
     setShowNav(!showNav);
   };
 
+  const onLangChangeHandler = (e) => {
+    i18n.changeLanguage(e.target.value);
+  };
+
   const navClasses = !showNav
     ? `${navbarClasses.nav}`
     : `${navbarClasses.nav} ${navbarClasses["show-nav"]}`;
@@ -114,8 +114,14 @@ const Navigation = () => {
           </li>
           <li className={navbarClasses.item}>
             <button onClick={goToContact}>
-              <Trans i18nKey="menu.ite6">Kontakt</Trans>
+              <Trans i18nKey="menu.item6">Kontakt</Trans>
             </button>
+          </li>
+          <li className={navbarClasses.item}>
+            <select onChange={onLangChangeHandler}>
+              <option value="cs">Čeština</option>
+              <option value="de">Deutsch</option>
+            </select>
           </li>
         </ul>
       </nav>
