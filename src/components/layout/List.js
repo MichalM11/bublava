@@ -6,11 +6,11 @@ const List = () => {
     <section style={{ margin: "10rem 0" }}>
       <Element name="details" />
       <ul className={listClasses.list}>
-        <li className={listClasses.item}>Dřevostavba 40 m² ????</li>
-        <li className={listClasses.item}>Pozemek 563 m² ????</li>
-        <li className={listClasses.item}>Dojezdová vzdálenost do Brna ????</li>
-        <li className={listClasses.item}>Výhled na Letovický zámek ????</li>
-        <li className={listClasses.item}>Klidná a tichá lokalita ????</li>
+        <li className={listClasses.item}>Vila 445 m²</li>
+        <li className={listClasses.item}>Pozemek 2 358 m²</li>
+        <li className={listClasses.item}>4 podlaží, 1 podzemní podlaží</li>
+        <li className={listClasses.item}>Cihlová konstrukce budovy</li>
+        <li className={listClasses.item}>Turisticky vyhledávaná oblast</li>
       </ul>
     </section>
   );

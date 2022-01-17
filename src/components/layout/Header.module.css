@@ -178,7 +178,7 @@
     animation: unset;
     font-size: 1.8rem;
     width: auto;
-    z-index: 100;
+    z-index: 600;
     border-radius: 3rem;
     box-shadow: unset;
     border: 0.2rem solid var(--main-color);

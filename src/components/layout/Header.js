@@ -28,11 +28,11 @@ const Header = (props) => {
       <div className={headerClasses.hero}></div>
       {!props.appIsLoading && (
         <div ref={infoRef} className={headerClasses.info}>
-          <h1 className={headerClasses.small}>PRODEJ VILY ???</h1>
+          <h1 className={headerClasses.small}>PRODEJ VILY 445 m2</h1>
           <p className={headerClasses.large}>
-            Cena: <span>????</span>
+            Cena: <span>8 490 000 Kč</span>
           </p>
-          <p className={headerClasses.small}>adresa</p>
+          <p className={headerClasses.small}>Bublava, Sokolov</p>
         </div>
       )}
       {!props.appIsLoading && (

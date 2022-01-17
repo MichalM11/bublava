@@ -1,11 +1,11 @@
-import GoogleMap from "../map/GoogleMap";
+import LeafletMap from "../map/LeafletMap";
 
 import classes from "./MapWrap.module.css";
 
 const MapWrap = () => {
   return (
     <section className={classes.mapwrap}>
-      <GoogleMap />
+      <LeafletMap />
     </section>
   );
 };
