@@ -1,5 +1,7 @@
 import headerClasses from "./Header.module.css";
 
+import { useTranslation, Trans } from "react-i18next";
+
 import { scroller } from "react-scroll";
 import { useInView } from "react-intersection-observer";
 
@@ -10,6 +12,9 @@ const Header = (props) => {
   const { ref: infoRef, inView: infoInView } = useInView({
     triggerOnce: true,
   });
+
+  const { t, i18n } = useTranslation();
+  console.log("i18n", i18n);
 
   const btnClickHandler = () => {
     scroller.scrollTo("profile", {
@@ -28,16 +33,21 @@ const Header = (props) => {
       <div className={headerClasses.hero}></div>
       {!props.appIsLoading && (
         <div ref={infoRef} className={headerClasses.info}>
-          <h1 className={headerClasses.small}>PRODEJ VILY 445 m2</h1>
+          <h1 className={headerClasses.small}>
+            <Trans i18nKey="header.title">PRODEJ VILY 445 m2</Trans>
+          </h1>
           <p className={headerClasses.large}>
-            Cena: <span>8 490 000 Kč</span>
+            <Trans i18nKey="header.price">Cena:</Trans>
+            <span>8 490 000 Kč</span>
           </p>
-          <p className={headerClasses.small}>Bublava, Sokolov</p>
+          <p className={headerClasses.small}>
+            <Trans i18nKey="header.location">Bublava, Krušné Hory</Trans>
+          </p>
         </div>
       )}
       {!props.appIsLoading && (
         <button ref={btnRef} onClick={btnClickHandler} className={btnClasses}>
-          Sjednat Prohlídku
+          <Trans i18nKey="header.button">Sjednat Prohlídku</Trans>
         </button>
       )}
     </header>

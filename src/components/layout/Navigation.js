@@ -1,9 +1,16 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { Trans, useTranslation } from "react-i18next";
 import { animateScroll, scroller } from "react-scroll";
 import navbarClasses from "./Navigation.module.css";
 
 const Navigation = () => {
   const [showNav, setShowNav] = useState(false);
+
+  const { t, i18n } = useTranslation();
+
+  // useEffect(() => {
+  //   i18n.changeLanguage("de");
+  // }, [i18n]);
 
   const goHomeHandler = () => {
     animateScroll.scrollToTop({ duration: 1000, smooth: true });
@@ -81,22 +88,34 @@ const Navigation = () => {
       <nav className={navClasses}>
         <ul className={navbarClasses.list}>
           <li className={navbarClasses.item}>
-            <button onClick={goHomeHandler}>Úvod</button>
+            <button onClick={goHomeHandler}>
+              <Trans i18nKey="menu.item1">Úvod</Trans>
+            </button>
           </li>
           <li className={navbarClasses.item}>
-            <button onClick={goToDetails}>Detaily</button>
+            <button onClick={goToDetails}>
+              <Trans i18nKey="menu.item2">Detaily</Trans>
+            </button>
           </li>
           <li className={navbarClasses.item}>
-            <button onClick={goToPlaces}>Okolí</button>
+            <button onClick={goToPlaces}>
+              <Trans i18nKey="menu.item3">Okolí</Trans>
+            </button>
           </li>
           <li className={navbarClasses.item}>
-            <button onClick={goToDesc}>Popis</button>
+            <button onClick={goToDesc}>
+              <Trans i18nKey="menu.item4">Popis</Trans>
+            </button>
           </li>
           <li className={navbarClasses.item}>
-            <button onClick={goToGallery}>Galerie</button>
+            <button onClick={goToGallery}>
+              <Trans i18nKey="menu.item5">Galerie</Trans>
+            </button>
           </li>
           <li className={navbarClasses.item}>
-            <button onClick={goToContact}>Kontakt</button>
+            <button onClick={goToContact}>
+              <Trans i18nKey="menu.ite6">Kontakt</Trans>
+            </button>
           </li>
         </ul>
       </nav>

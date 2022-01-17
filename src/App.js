@@ -52,9 +52,10 @@ import MapWrap from "./components/layout/MapWrap";
 
 import appClasses from "./App.module.css";
 // import FullGallery from "./components/layout/FullGallery";
-import { useState } from "react";
+import { useState, Suspense, useEffect } from "react";
 import LoadingSpinner from "./components/UI/LoadingSpinner";
 import LazyLoad from "react-lazyload";
+import { useTranslation } from "react-i18next";
 
 const images = [
   {
@@ -208,9 +209,13 @@ const App = () => {
         </div>
       )}
 
-      <Navigation />
+      <Suspense fallback={<div>Loading...</div>}>
+        <Navigation />
+      </Suspense>
 
-      <Header hero={img5} appIsLoading={isLoading} />
+      <Suspense fallback={<div>Loading...</div>}>
+        <Header hero={img5} appIsLoading={isLoading} />
+      </Suspense>
 
       <section className={appClasses.section}>
         <List />
@@ -228,7 +233,9 @@ const App = () => {
       <section
         className={appClasses.section + " " + appClasses["section--reverse"]}
       >
-        <Paragraphs />
+        <Suspense fallback={<div>Loading...</div>}>
+          <Paragraphs />
+        </Suspense>
 
         <Images
           images={images}
