@@ -18,6 +18,7 @@ import img17 from "./assets/img9.png";
 import img18 from "./assets/img10.png";
 import img19 from "./assets/skiareal.png";
 import img20 from "./assets/zasnezovani.jpeg";
+import img21 from "./assets/pudorys.png";
 
 import img1Thumb from "./assets/bike_thumb.jpeg";
 import img2Thumb from "./assets/bike2_thumb.jpeg";
@@ -59,13 +60,13 @@ const images = [
   {
     id: "i1",
     src: img1,
-    alt: "Obrázek nemovitosti",
+    alt: "Volnočasové aktivity",
     thumb: img1Thumb,
   },
   {
     id: "i2",
     src: img2,
-    alt: "Obrázek nemovitosti",
+    alt: "Volnočasové aktivity",
     thumb: img2Thumb,
   },
   {
@@ -101,7 +102,7 @@ const images = [
   {
     id: "i8",
     src: img8,
-    alt: "Obrázek nemovitosti",
+    alt: "Volnočasové aktivity",
     thumb: img8Thumb,
   },
   {
@@ -167,14 +168,20 @@ const images = [
   {
     id: "i19",
     src: img19,
-    alt: "Obrázek nemovitosti",
+    alt: "Volnočasové aktivity",
     thumb: img19Thumb,
   },
   {
     id: "i20",
     src: img20,
-    alt: "Obrázek nemovitosti",
+    alt: "Volnočasové aktivity",
     thumb: img20Thumb,
+  },
+  {
+    id: "i21",
+    src: img21,
+    alt: "Pudorys nemovitosti",
+    thumb: img21,
   },
 ];
 
