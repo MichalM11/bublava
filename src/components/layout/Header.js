@@ -9,10 +9,11 @@ const Header = (props) => {
   const { ref: btnRef, inView: btnInView } = useInView({
     triggerOnce: true,
   });
-  const { ref: infoRef, inView: infoInView } = useInView({
+  const { ref: infoRef } = useInView({
     triggerOnce: true,
   });
 
+  // eslint-disable-next-line no-unused-vars
   const { t, i18n } = useTranslation();
 
   const btnClickHandler = () => {

@@ -7,6 +7,7 @@ const Navigation = () => {
   const [showNav, setShowNav] = useState(false);
   const [locale, setLocale] = useState("cs");
 
+  // eslint-disable-next-line no-unused-vars
   const { t, i18n } = useTranslation();
 
   useEffect(() => {

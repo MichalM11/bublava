@@ -3,6 +3,7 @@ import { Element } from "react-scroll";
 import paragraphClasses from "./Paragraphs.module.css";
 
 const Paragraphs = (props) => {
+  // eslint-disable-next-line no-unused-vars
   const { t, i18n } = useTranslation();
 
   return (
