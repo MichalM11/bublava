@@ -1,4 +1,4 @@
-import { MapContainer, TileLayer, Marker, Tooltip } from "react-leaflet";
+import { MapContainer, TileLayer, Circle } from "react-leaflet";
 
 const LeafletMap = (props) => {
   return (
@@ -11,9 +11,11 @@ const LeafletMap = (props) => {
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
-      <Marker position={[50.37, 12.51]}>
-        <Tooltip>Vila Bublava</Tooltip>
-      </Marker>
+      <Circle
+        center={[50.37, 12.51]}
+        pathOptions={{ color: "blue" }}
+        radius={800}
+      ></Circle>
     </MapContainer>
   );
 };

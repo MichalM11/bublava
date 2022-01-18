@@ -81,6 +81,7 @@ const Navigation = () => {
 
   const onLangChangeHandler = (e) => {
     i18n.changeLanguage(e.target.value);
+    setShowNav(false);
   };
 
   const navClasses = !showNav

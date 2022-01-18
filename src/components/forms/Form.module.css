@@ -116,13 +116,34 @@
     width: 90%;
     display: flex;
     margin: 10rem auto 6rem auto;
-    padding: 0 10rem;
-    gap: 10rem;
+    padding: 0 5rem;
+    gap: 5rem;
   }
 
   .form {
     width: 50%;
     padding-left: 0;
     padding-right: 0;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .container {
+    gap: 10rem;
+    padding: 0 10rem;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .container {
+    gap: 15rem;
+    padding: 0 15rem;
+  }
+}
+
+@media only screen and (min-width: 2200px) {
+  .container {
+    gap: 20rem;
+    padding: 0 20rem;
   }
 }

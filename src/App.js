@@ -242,7 +242,9 @@ const App = () => {
       </Suspense>
 
       <section className={appClasses.section}>
-        <List />
+        <Suspense fallback={<div>Loading...</div>}>
+          <List />
+        </Suspense>
 
         <Images
           images={images}
@@ -252,7 +254,9 @@ const App = () => {
         />
       </section>
 
-      <Places />
+      <Suspense fallback={<div>Loading...</div>}>
+        <Places />
+      </Suspense>
 
       <section
         className={appClasses.section + " " + appClasses["section--reverse"]}
@@ -275,7 +279,9 @@ const App = () => {
         <MapWrap />
       </LazyLoad>
 
-      <ContactForm background={img14} />
+      <Suspense fallback={<div>Loading...</div>}>
+        <ContactForm background={img14} />
+      </Suspense>
     </div>
   );
 };

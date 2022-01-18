@@ -7,6 +7,7 @@ import useInput from "../../hooks/use-input";
 import PoliciesModal from "../UI/PoliciesModal";
 import LoadingSpinner from "../UI/LoadingSpinner";
 import MessageModal from "../UI/MessageModal";
+import { Trans, useTranslation } from "react-i18next";
 
 const ContactForm = (props) => {
   const form = useRef();
@@ -17,6 +18,9 @@ const ContactForm = (props) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [message, setMessage] = useState(undefined);
   const [error, setError] = useState(false);
+
+  // eslint-disable-next-line no-unused-vars
+  const { t, i18n } = useTranslation();
 
   const {
     value: enteredPhone,
@@ -145,9 +149,13 @@ const ContactForm = (props) => {
       <Profile />
 
       <form ref={form} onSubmit={sendEmail} className={formClasses.form}>
-        <h2 className={formClasses.heading}>Kontaktní formulář</h2>
+        <h2 className={formClasses.heading}>
+          <Trans i18nKey="contact.title">Kontaktní formulář</Trans>
+        </h2>
         <div className={phoneInputClasses}>
-          <label htmlFor="phone">Váš Telefon</label>
+          <label htmlFor="phone">
+            <Trans i18nKey="contact.tel">Váš Telefon</Trans>
+          </label>
           <input
             id="phone"
             type="tel"
@@ -164,7 +172,9 @@ const ContactForm = (props) => {
           )}
         </div>
         <div className={messageInputClasses}>
-          <label htmlFor="message">Zpráva</label>
+          <label htmlFor="message">
+            <Trans i18nKey="contact.message">Zpráva</Trans>
+          </label>
           <textarea
             id="message"
             type="text"
@@ -208,7 +218,7 @@ const ContactForm = (props) => {
           disabled={!formIsValid}
         >
           {!isSubmitting ? (
-            "Odeslat"
+            <Trans i18nKey="contact.submit">Odeslat</Trans>
           ) : (
             <LoadingSpinner width="2rem" height="2rem" />
           )}
