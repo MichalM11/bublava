@@ -9,22 +9,36 @@
   },
   "header": {
     "title": "PRODEJ VILY 445 m2 testDE",
-    "price": "Cena: ",
+    "price": "Preis: ",
     "location": "Bublava, Krušné Hory",
     "button": "Sjednat Prohlídku DE"
   },
 
   "list": {
-    "item1": "Vila 445 m² DE",
+    "item1": "Villa 445 m²",
     "item2": "4 podlaží, 1 podzemní podlaží",
     "item3": "Turisticky vyhledávaná oblast",
-    "item4": "Pozemek 2 358 m²",
+    "item4": "Grundstück 2 358 m²",
     "item5": "Cihlová konstrukce budovy"
+  },
+  "places": {
+    "item1": "Markt",
+    "item2": "Bus",
+    "item3": "Schule",
+    "item4": "Restaurant",
+    "item5": "Post",
+    "item6": "Arzt"
   },
   "text": {
     "paragraph1": "Wir möchten Ihnen eine große Villa im Herzen des beliebten Touristenzentrums Bublava im Erzgebirge vorstellen. Nach Modernisierung und überwiegend oberflächlichem Umbau erhält der Eigentümer ein funktionaler Komplex aus 5 großzügig gestalteten Wohnungen (3 x 3-Zimmer-Wohnung, 2x 4-Zimmer-Wohnung) mit Hauswirtschaftsräumen, Parkplätzen und einem großen Garten, den man direkt vom Skigebiet mit Vierer-Seilbahn abfährt.",
     "paragraph2": "Die Villa bietet mit ihrer Disposition und Lage neben dem Mehrgenerationenhaus oder einer Wochenendresidenz auch eine sehr interessante Investitionsmöglichkeit. Wohnungen im Bublava werden in den Winter- und Sommermonaten regelmäßig belegt, sowohl von tschechischen als auch aufgrund der Nähe der deutschen Grenze (Klingenthal) von deutschen Touristen. Im Winter ist die Lokalität attraktiv wegen eins modernen Skigebiets mit einem breiten Angebot an beschneiten Pisten, eines Kinderparks, einer nahegelegenen Skisprungschanze. Man kann auch auf der über 100 km präparierten Langlaufloipen langlaufen. Im Sommer gibt es viele Möglichkeiten für schöne Wanderungen durch die schöne Natur des Erzgebirges. Radfahrer finden Aktivitäten im örtlichen Trailpark, Familien mit Kindern im nahegelegenen Zoo.",
     "paragraph3": "Die Villa besteht aus Erdgeschoss, Obergeschoss, Dachgeschoss und verfügt über einen Keller mit zahlreichen und großen Technikräumen und Haushaltsräumen. Im Erdgeschoss befinden sich 7 Zimmer: Eine separate 3-Zimmer-Wohnung und zweite separate 4-Zimmer-Wohnung, die durch die Kombination von 2 Zimmern mit Vorbereitung für die Küche und zwei separaten Räumen entsteht. Eine ähnliche Situation befindet sich im Obergeschoss: Eine separate 3-Zimmer-Wohnung und die andere 4-Zimmer-Wohnung entsteht durch die Trennung des Eingangs zur Dachgeschosswohnung. Die Dachgeschosswohnung befindet sich in einem unvollendeten ambitionierten Umbau, nach dessen Fertigstellung ein großes 3-Zimmer-Wohnung mit großem Wohnzimmer und Bad entstehen wird Fenster mit manuellen sowie elektrischen Jalousien sorgen für viel Tageslicht in allen Räumen. Im weitläufigen Garten besteht die Möglichkeit, einen Swimmingpool, einen Spielplatz zu bauen oder ihn für ein angenehmes Sitzen am Außenfeuer zu nutzen.",
     "paragraph4": "Bei Interesse empfehlen wir eine Besichtigung der Immobilie und seiner Umgebung - nur so können Sie das Potenzial der Villa erkennen."
+  },
+  "contact": {
+    "title": "Kontakt Formular",
+    "tel": "Telefon",
+    "message": "Nachricht",
+    "submit": "Senden"
   }
 }
