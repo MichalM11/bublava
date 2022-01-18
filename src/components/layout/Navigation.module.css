@@ -94,15 +94,31 @@
 }
 
 .list select {
-  background-color: #fff;
-  border: transparent;
+  background-color: var(--main-color-text);
+  border: 1px solid transparent;
   color: var(--main-color);
-  font-weight: bold;
-  font-size: 1rem;
+  font-weight: 700;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  width: 100%;
+  border-radius: 1.5rem;
+}
+
+.list select:focus {
+  outline: none;
+}
+
+.list select:hover {
+  background: var(--main-color-text);
+  color: var(--main-color);
+  border: 1px solid var(--main-color-text);
 }
 
 .list select:active {
   outline: none;
+  background: var(--main-color);
+  color: var(--main-color-text);
 }
 
 @media only screen and (min-width: 700px) {
@@ -147,5 +163,24 @@
 
   .navbar button:hover {
     background: var(--dark-grey);
+  }
+
+  .list select {
+    background-color: var(--main-color);
+    border: 1px solid transparent;
+    color: var(--main-color-text);
+    min-width: 7rem;
+  }
+
+  .list select:hover {
+    background: var(--light-grey);
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
+  }
+
+  .list select:active {
+    outline: none;
+    background: var(--light-grey);
+    color: var(--main-color);
   }
 }

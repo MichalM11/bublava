@@ -14,7 +14,6 @@ const Header = (props) => {
   });
 
   const { t, i18n } = useTranslation();
-  console.log("i18n", i18n);
 
   const btnClickHandler = () => {
     scroller.scrollTo("profile", {

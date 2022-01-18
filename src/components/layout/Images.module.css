@@ -20,6 +20,18 @@
   width: 50vw;
   min-height: 20vh;
 }
+
+.img1,
+.img2 {
+  transition: transform 0.5s ease;
+}
+
+.img1:hover,
+.img2:hover {
+  transform: scale(1.1);
+  z-index: 1;
+}
+
 /* .img3 {
   grid-area: img3;
   width: 50vw;

@@ -10,8 +10,8 @@ import img9 from "./assets/img1.png";
 import img10 from "./assets/img2.png";
 import img11 from "./assets/img3.png";
 import img12 from "./assets/img4.png";
-import img13 from "./assets/img5.png";
-import img14 from "./assets/img6.png";
+import img13 from "./assets/foto1.jpg";
+import img14 from "./assets/foto2.jpg";
 import img15 from "./assets/img7.png";
 import img16 from "./assets/img8.png";
 import img17 from "./assets/img9.png";
@@ -19,6 +19,9 @@ import img18 from "./assets/img10.png";
 import img19 from "./assets/skiareal.png";
 import img20 from "./assets/zasnezovani.jpeg";
 import img21 from "./assets/pudorys.png";
+import img22 from "./assets/foto4.jpg";
+import img23 from "./assets/foto5.jpg";
+import img24 from "./assets/foto3.jpg";
 
 import img1Thumb from "./assets/bike_thumb.jpeg";
 import img2Thumb from "./assets/bike2_thumb.jpeg";
@@ -32,14 +35,18 @@ import img9Thumb from "./assets/img1_thumb.png";
 import img10Thumb from "./assets/img2_thumb.png";
 import img11Thumb from "./assets/img3_thumb.png";
 import img12Thumb from "./assets/img4_thumb.png";
-import img13Thumb from "./assets/img5_thumb.png";
-import img14Thumb from "./assets/img6_thumb.png";
+import img13Thumb from "./assets/foto1_thumb.jpg";
+import img14Thumb from "./assets/foto2_thumb.jpg";
 import img15Thumb from "./assets/img7_thumb.png";
 import img16Thumb from "./assets/img8_thumb.png";
 import img17Thumb from "./assets/img9_thumb.png";
 import img18Thumb from "./assets/img10_thumb.png";
 import img19Thumb from "./assets/skiareal_thumb.png";
 import img20Thumb from "./assets/zasnezovani_thumb.jpeg";
+import img21Thumb from "./assets/pudorys.png";
+import img22Thumb from "./assets/foto3_thumb.jpg";
+import img23Thumb from "./assets/foto4_thumb.jpg";
+import img24Thumb from "./assets/foto5_thumb.jpg";
 
 import Header from "./components/layout/Header";
 import Navigation from "./components/layout/Navigation";
@@ -52,10 +59,9 @@ import MapWrap from "./components/layout/MapWrap";
 
 import appClasses from "./App.module.css";
 // import FullGallery from "./components/layout/FullGallery";
-import { useState, Suspense, useEffect } from "react";
+import { useState, Suspense } from "react";
 import LoadingSpinner from "./components/UI/LoadingSpinner";
 import LazyLoad from "react-lazyload";
-import { useTranslation } from "react-i18next";
 
 const images = [
   {
@@ -182,7 +188,25 @@ const images = [
     id: "i21",
     src: img21,
     alt: "Pudorys nemovitosti",
-    thumb: img21,
+    thumb: img21Thumb,
+  },
+  {
+    id: "i22",
+    src: img22,
+    alt: "Vizualizace nemovitosti",
+    thumb: img22Thumb,
+  },
+  {
+    id: "i23",
+    src: img23,
+    alt: "Vizualizace nemovitosti",
+    thumb: img23Thumb,
+  },
+  {
+    id: "i24",
+    src: img24,
+    alt: "Vizualizace nemovitosti",
+    thumb: img24Thumb,
   },
 ];
 
@@ -214,7 +238,7 @@ const App = () => {
       </Suspense>
 
       <Suspense fallback={<div>Loading...</div>}>
-        <Header hero={img5} appIsLoading={isLoading} />
+        <Header hero={img22} appIsLoading={isLoading} />
       </Suspense>
 
       <section className={appClasses.section}>
@@ -251,7 +275,7 @@ const App = () => {
         <MapWrap />
       </LazyLoad>
 
-      <ContactForm background={img10} />
+      <ContactForm background={img14} />
     </div>
   );
 };

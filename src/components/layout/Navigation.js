@@ -5,8 +5,18 @@ import navbarClasses from "./Navigation.module.css";
 
 const Navigation = () => {
   const [showNav, setShowNav] = useState(false);
+  const [locale, setLocale] = useState("cs");
 
   const { t, i18n } = useTranslation();
+
+  useEffect(() => {
+    if (navigator.language.split("-")[0] === "de") {
+      setLocale("de");
+      i18n.changeLanguage("de");
+    }
+
+    i18n.changeLanguage("cs");
+  }, [i18n]);
 
   const goHomeHandler = () => {
     animateScroll.scrollToTop({ duration: 1000, smooth: true });
@@ -119,8 +129,12 @@ const Navigation = () => {
           </li>
           <li className={navbarClasses.item}>
             <select onChange={onLangChangeHandler}>
-              <option value="cs">Čeština</option>
-              <option value="de">Deutsch</option>
+              <option value="cs" selected={locale === "cs"}>
+                CZ
+              </option>
+              <option value="de" selected={locale === "de"}>
+                DE
+              </option>
             </select>
           </li>
         </ul>
