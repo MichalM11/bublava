@@ -10,6 +10,7 @@
   "header": {
     "title": "PRODEJ VILY 445 m2",
     "price": "Cena: ",
+    "priceNumber": "8 490 000 Kč",
     "location": "Bublava, Krušné Hory",
     "button": "Sjednat Prohlídku"
   },
@@ -38,6 +39,7 @@
   "contact": {
     "title": "Kontaktní formulář",
     "tel": "Váš Telefon",
+    "email": "Váš Email",
     "message": "Zpráva",
     "submit": "Odeslat"
   }

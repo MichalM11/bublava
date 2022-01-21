@@ -1,25 +1,26 @@
 {
   "menu": {
-    "item1": "Einleitung",
-    "item2": "Einzelheiten",
-    "item3": "Umfeld",
-    "item4": "Bezeichnung",
+    "item1": "Einführung",
+    "item2": "Details",
+    "item3": "Umgebung",
+    "item4": "Beschreibung",
     "item5": "Galerie",
     "item6": "Kontakt"
   },
   "header": {
-    "title": "PRODEJ VILY 445 m2 testDE",
+    "title": "VILLA ZU VERKAUFEN 445 m2",
     "price": "Preis: ",
-    "location": "Bublava, Krušné Hory",
-    "button": "Sjednat Prohlídku DE"
+    "priceNumber": "349 000 €",
+    "location": "Bublava, Erzgebirge",
+    "button": "Tour vereinbaren"
   },
 
   "list": {
     "item1": "Villa 445 m²",
-    "item2": "4 podlaží, 1 podzemní podlaží",
-    "item3": "Turisticky vyhledávaná oblast",
-    "item4": "Grundstück 2 358 m²",
-    "item5": "Cihlová konstrukce budovy"
+    "item2": "4 Stockwerke, 1 Untergeschoss",
+    "item3": "das Reisegebiet",
+    "item4": "Grundstück ist 2 358 m2 groß",
+    "item5": "Ziegelbau des Gebäudes"
   },
   "places": {
     "item1": "Markt",
@@ -38,6 +39,7 @@
   "contact": {
     "title": "Kontakt Formular",
     "tel": "Telefon",
+    "email": "Email",
     "message": "Nachricht",
     "submit": "Senden"
   }
