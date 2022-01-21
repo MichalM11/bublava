@@ -2,7 +2,12 @@
   width: 100%;
   overflow: hidden;
   display: grid;
-  grid-template-areas: "img1 img2";
+  grid-template-areas:
+    "img1 img2"
+    "img3 img3";
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
 }
 
 .gallery-image {
@@ -11,97 +16,85 @@
 
 .img1 {
   grid-area: img1;
-  width: 50vw;
-  min-height: 20vh;
+  width: 45vw;
+  height: 25.2vw;
+  z-index: 1;
+  margin-bottom: 5vw;
 }
 
 .img2 {
   grid-area: img2;
-  width: 50vw;
-  min-height: 20vh;
+  width: 45vw;
+  height: 25.2vw;
+  z-index: 2;
+  justify-self: flex-end;
+  margin-bottom: 5vw;
+}
+
+.img3 {
+  grid-area: img3;
+  width: 95vw;
+  height: 53.2vw;
 }
 
 .img1,
-.img2 {
+.img2,
+.img3 {
   transition: transform 0.5s ease;
+  border-radius: 1rem;
 }
 
 .img1:hover,
-.img2:hover {
-  transform: scale(1.1);
-  z-index: 1;
+.img2:hover,
+.img3:hover {
+  transform: scale(1.03);
+  z-index: 4;
 }
 
-/* .img3 {
-  grid-area: img3;
-  width: 50vw;
-  height: 66.66vw;
-} */
-
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 1000px) {
   .gallery {
-    width: 61.5rem;
-    height: 68rem;
-    margin: 10rem auto;
-    border-radius: 1rem;
-    overflow: hidden;
-    grid-template-areas:
-      "img1"
-      "img2";
+    /* height: 45.4rem; */
+    width: 40rem;
   }
 
-  .img1,
+  .img1 {
+    width: 18rem;
+    height: 10rem;
+    margin-bottom: 2rem;
+  }
+
   .img2 {
-    width: 61.5rem;
-    height: 34rem;
+    width: 18rem;
+    height: 10rem;
+    margin-bottom: 2rem;
+  }
+
+  .img3 {
+    width: 38rem;
+    height: 21rem;
   }
 }
 
 @media only screen and (min-width: 1000px) {
   .gallery {
-    height: unset;
-    width: 44rem;
-    grid-template-areas:
-      "img1"
-      "img2";
+    /* height: 45.4rem; */
+    width: 60rem;
   }
 
-  .img1,
+  .img1 {
+    width: 27rem;
+    height: 15rem;
+    margin-bottom: 3rem;
+  }
+
   .img2 {
-    height: 25rem;
-    width: 44rem;
+    width: 27rem;
+    height: 15rem;
+    margin-bottom: 3rem;
+  }
+
+  .img3 {
+    width: 57rem;
+    height: 31.5rem;
   }
 }
-
-/* @media only screen and (min-width: 700px) {
-  .gallery {
-    width: 90%;
-    height: 40rem;
-    margin: 0 auto;
-    border-radius: 1rem;
-    overflow: hidden;
-    grid-template-areas:
-      "img1 img2"
-      "img1 img3";
-  }
-
-  .img1 {
-    height: 40rem;
-    width: auto;
-  }
-}
-
-@media only screen and (min-width: 1000px) {
-  .gallery {
-    height: unset;
-    width: 30rem;
-    grid-template-areas:
-      "img1 img1"
-      "img2 img3";
-  }
-
-  .img1 {
-    height: auto;
-    width: 100%;
-  }
-} */

@@ -9,7 +9,7 @@ const Images = (props) => {
 
   let img1src = props.img1.src;
   let img2src = props.img2.src;
-  // let img3src = props.img3.src;
+  let img3src = props.img3.src;
 
   const showFullGalHandler = (image) => {
     setShowGallery(true);
@@ -39,13 +39,13 @@ const Images = (props) => {
           imgData={props.img2}
         />
 
-        {/* <ImageRenderer
+        <ImageRenderer
           src={img3src}
           thumb={props.img3.thumb}
           imageClass={galleryClasses.img3}
           onImgClick={showFullGalHandler}
           imgData={props.img3}
-        /> */}
+        />
       </div>
 
       {showGallery && (
