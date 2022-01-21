@@ -1,14 +1,25 @@
 import { useEffect, useState } from "react";
 import { Trans, useTranslation } from "react-i18next";
 import { animateScroll, scroller } from "react-scroll";
+import GalleryModal from "../UI/GalleryModal";
 import navbarClasses from "./Navigation.module.css";
 
-const Navigation = () => {
+const Navigation = (props) => {
   const [showNav, setShowNav] = useState(false);
   const [locale, setLocale] = useState("cs");
+  const [showGallery, setShowGallery] = useState(false);
 
   // eslint-disable-next-line no-unused-vars
   const { t, i18n } = useTranslation();
+
+  const showFullGalHandler = () => {
+    setShowGallery(true);
+    setShowNav(false);
+  };
+
+  const closeFullGalleryHandler = () => {
+    setShowGallery(false);
+  };
 
   useEffect(() => {
     if (navigator.language.split("-")[0] === "de") {
@@ -37,16 +48,6 @@ const Navigation = () => {
 
   const goToDesc = () => {
     scroller.scrollTo("desc", {
-      duration: 1000,
-      smooth: true,
-      offset: -100,
-    });
-
-    setShowNav(false);
-  };
-
-  const goToGallery = () => {
-    scroller.scrollTo("gallery", {
       duration: 1000,
       smooth: true,
       offset: -100,
@@ -120,7 +121,7 @@ const Navigation = () => {
             </button>
           </li>
           <li className={navbarClasses.item}>
-            <button onClick={goToGallery}>
+            <button onClick={showFullGalHandler}>
               <Trans i18nKey="menu.item5">Galerie</Trans>
             </button>
           </li>
@@ -141,6 +142,13 @@ const Navigation = () => {
           </li>
         </ul>
       </nav>
+      {showGallery && (
+        <GalleryModal
+          images={props.images}
+          onClose={closeFullGalleryHandler}
+          curImage={props.images[0]}
+        />
+      )}
     </nav>
   );
 };

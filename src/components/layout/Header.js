@@ -38,7 +38,9 @@ const Header = (props) => {
           </h1>
           <p className={headerClasses.large}>
             <Trans i18nKey="header.price">Cena:</Trans>
-            <span>8 490 000 Kč</span>
+            <span>
+              <Trans i18nKey="header.priceNumber">8 490 000 Kč</Trans>
+            </span>
           </p>
           <p className={headerClasses.small}>
             <Trans i18nKey="header.location">Bublava, Krušné Hory</Trans>
