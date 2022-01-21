@@ -29,13 +29,35 @@ const ContactForm = (props) => {
     valueChangeHandler: phoneChangeHandler,
     inputBlurHandler: phoneBlurHandler,
     reset: phoneReset,
-  } = useInput((value) => {
-    const re = /^(\+[0-9]{3})\s?[0-9]{3}\s?[0-9]{3}\s?[0-9]{3}/;
+  } = useInput(
+    (value) => {
+      const re = /^[+]?[()/0-9. -]{9,}$/;
 
-    const valid = re.test(value);
+      const valid = re.test(value);
 
-    return valid;
-  }, "");
+      return valid;
+    },
+    // const re = /^(\+[0-9]{3})\s?[0-9]{3}\s?[0-9]{3}\s?[0-9]{3}/;
+
+    // return valid;
+    ""
+  );
+
+  const {
+    value: enteredEmail,
+    isValid: emailIsValid,
+    hasError: emailHasError,
+    valueChangeHandler: emailChangeHandler,
+    inputBlurHandler: emailBlurHandler,
+    reset: emailReset,
+  } = useInput(
+    (value) =>
+      !value.includes("{") &&
+      !value.includes("}") &&
+      !value.includes("<") &&
+      !value.includes(">"),
+    ""
+  );
 
   const initialMessage =
     "Dobrý den, mám zájem o bližší informace a případně i prohlídku. V termínu...";
@@ -65,6 +87,10 @@ const ContactForm = (props) => {
     ? formClasses.control + " " + formClasses.invalid
     : formClasses.control;
 
+  const emailInputClasses = emailHasError
+    ? formClasses.control + " " + formClasses.invalid
+    : formClasses.control;
+
   const messageInputClasses = messageHasError
     ? formClasses.control + " " + formClasses.invalid
     : formClasses.control;
@@ -87,7 +113,7 @@ const ContactForm = (props) => {
 
     setIsSubmitting(true);
 
-    if (!phoneIsValid && !messageIsValid) {
+    if (!phoneIsValid && !messageIsValid && !emailIsValid) {
       setIsSubmitting(false);
       return;
     }
@@ -113,6 +139,7 @@ const ContactForm = (props) => {
         (result) => {
           if (result.status === 200) {
             phoneReset();
+            emailReset();
             messageReset();
             setPoliciesChecked(false);
             setPoliciesHasError(null);
@@ -154,7 +181,7 @@ const ContactForm = (props) => {
         </h2>
         <div className={phoneInputClasses}>
           <label htmlFor="phone">
-            <Trans i18nKey="contact.tel">Váš Telefon</Trans>
+            <Trans i18nKey="contact.tel">Váš Telefon</Trans> *
           </label>
           <input
             id="phone"
@@ -167,13 +194,32 @@ const ContactForm = (props) => {
           />
           {phoneHasError && (
             <p className={formClasses.error}>
-              Telefon musí být zadán ve formátu +420 123 456 789.
+              Zadejte telefon v platném formátu.
+            </p>
+          )}
+        </div>
+        <div className={emailInputClasses}>
+          <label htmlFor="email">
+            <Trans i18nKey="contact.email">Váš Email</Trans>
+          </label>
+          <input
+            id="email"
+            type="email"
+            name="email"
+            value={enteredEmail}
+            onChange={emailChangeHandler}
+            onBlur={emailBlurHandler}
+            placeholder="priklad@email.cz"
+          />
+          {emailHasError && (
+            <p className={formClasses.error}>
+              Zadejte platnou emailovou adresu.
             </p>
           )}
         </div>
         <div className={messageInputClasses}>
           <label htmlFor="message">
-            <Trans i18nKey="contact.message">Zpráva</Trans>
+            <Trans i18nKey="contact.message">Zpráva</Trans> *
           </label>
           <textarea
             id="message"

@@ -62,10 +62,14 @@
 }
 
 .error {
-  color: var(--light-grey);
-  font-weight: 800;
-  font-size: 1rem;
+  color: #f3eaeae6;
+  font-weight: 700;
+  font-size: 1.3rem;
   margin-top: 1rem;
+  background: rgb(223, 34, 34);
+  padding: 0.3rem 0.6rem;
+  border-radius: 1rem;
+  justify-self: center;
 }
 
 .checkBox {
